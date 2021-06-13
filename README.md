@@ -1,6 +1,6 @@
 # Mass Spectrometry interaction Prediction (MSiP)
 The MSiP is a computational approach to predict protein-protein
-interactions (PPIs) from large-scale affinity purification mass spectrometry (AP-MS) data. This approach includes both spoke and matrix models for interpreting AP-MS data in a network context. The "spoke" model considers only bait-prey interactions, whereas the "matrix" model assumes that each of the identified proteins (baits and prey) in a given AP-MS experiment interacts with each of the others. The "spoke" model has a high false-negative rate, whereas a high positive rate has resulted from the matrix model. Thus, although both statistical models have merits, a combination of both spoke and matrix models has shown to increase the performance of machine learning classifiers in terms of their capabilities in discrimination between true and false positive interactions [Drew et al., 2017](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5488662). 
+interactions (PPIs) from large-scale affinity purification mass spectrometry (AP-MS) data. This approach includes both spoke and matrix models for interpreting AP-MS data in a network context. The "spoke" model considers only bait-prey interactions, whereas the "matrix" model assumes that each of the identified proteins (baits and prey) in a given AP-MS experiment interacts with each of the others. The spoke model has a high false-negative rate, whereas the matrix model has a high false-positive rate. Thus, although both statistical models have merits, a combination of both models has shown to increase the performance of machine learning classifiers in terms of their capabilities in discrimination between true and false positive interactions [Drew et al., 2017](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5488662).  
 
 ### Load the package
 ```{r}
@@ -50,7 +50,7 @@ Weighted.matrixModel(SampleDatInput)
 ```
 
 ### Assign a confidence score to each instances using classifiers:
-The labeled feature matrix can be used as input for Support Vector Machine (SVM) or random forest (RF) classifiers. The classifier then assigns each bait-prey pair a confidence score, indicating the level of support for that pair of proteins to interact. Hyperparameter optimization can also be performed to select a set of parameters that maximizes the model's performance. The RF and the SVM functions provided in this package also computes the areas under the precision-recall (PR) and ROC curve to evalute the performance of the classifer. 
+The labeled feature matrix can be used as input for Support Vector Machine (SVM) or Random Forest (RF) classifiers. The classifier then assigns each bait-prey pair a confidence score, indicating the level of support for that pair of proteins to interact. Hyperparameter optimization can also be performed to select a set of parameters that maximizes the model's performance. The RF and the SVM functions provided in this package also computes the areas under the precision-recall (PR) and ROC curve to evalute the performance of the classifer. 
 
 #### Import the demo data:
 ```{r}
