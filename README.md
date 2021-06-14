@@ -15,7 +15,7 @@ data("SampleDatInput")
 head(SampleDatInput)
 ```
 ### Scoring based on "spoke-model":
-Comparative Proteomic Analysis Software Suite (CompPASS) is a robust statistical scoring scheme for assigning confidence scores to bait-prey interactions [Sowa et al., 2009](https://www.cell.com/cell/fulltext/S0092-8674(09)00503-0?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0092867409005030%3Fshowall%3Dtrue). The output from CompPASS scoring includes Z-score, S-score, D-score, WD-score and other features. This function was optimized from the [source code](https://github.com/zqzneptune/SMAD).  
+Comparative Proteomic Analysis Software Suite (CompPASS) is a robust statistical scoring scheme for assigning confidence scores to bait-prey interactions [Sowa et al., 2009](https://www.cell.com/cell/fulltext/S0092-8674(09)00503-0?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0092867409005030%3Fshowall%3Dtrue). The output from CompPASS scoring includes Z-score, S-score, D-score, WD-score and other features.  
 
 ```{r}
 datScoring <- 
