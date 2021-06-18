@@ -1,7 +1,11 @@
 # Mass Spectrometry interaction Prediction (MSiP)
-The MSiP is a computational approach to predict protein-protein
-interactions (PPIs) from large-scale affinity purification mass spectrometry (AP-MS) data. This approach includes both spoke and matrix models for interpreting AP-MS data in a network context. The "spoke" model considers only bait-prey interactions, whereas the "matrix" model assumes that each of the identified proteins (baits and prey) in a given AP-MS experiment interacts with each of the others. The spoke model has a high false-negative rate, whereas the matrix model has a high false-positive rate. Thus, although both statistical models have merits, a combination of both models has shown to increase the performance of machine learning classifiers in terms of their capabilities in discrimination between true and false positive interactions [Drew et al., 2017](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5488662).  
+The MSiP is a computational approach to predict protein-protein interactions from largescale affinity purification mass spectrometry (AP-MS) data. This approach includes both spoke and matrix models for interpreting AP-MS data in a network context. The 'spoke' model considers only bait-prey interactions, whereas the 'matrix' model assumes that each of the identified proteins (baits and prey) in a given AP-MS experiment interacts with each of the others. The spoke model has a high false-negative rate, whereas the matrix model has a high false-positive rate. Although, both statistical models have merits, a combination of both models has shown to increase the performance of machine learning classifiers in terms of their capabilities in discrimination between true and false positive interactions [Drew et al., 2017](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5488662).  
 
+### Installation from cran:
+```{r}
+install.packages('MSiP')
+library(MSiP)
+```
 ### Installation from github:
 ```{r}
 install_github("Babulab-bioc/MSiP")
@@ -40,7 +44,7 @@ datScoring <-
 
 #Overlap score
 datScoring <- 
-    simpsonCoefficient(SampleDatInput)
+    overlapCoefficient(SampleDatInput)
 ```
 
 Finally, a weighted matrix model [Drew et al., 2017](https://www.embopress.org/doi/full/10.15252/msb.20167490) can also be employed to score interactions between identified proteins in a given AP-MS experiment. The output of the weighted matrix model includes the number of experiments for which the pair of proteins is co-purified (i.e., k) and $-1$*log(P-value) of the hypergeometric test (i.e., logHG) given the experimental overlap value, each protein's total number of observed experiments, and the total number of experiments.
@@ -51,7 +55,7 @@ Weighted.matrixModel(SampleDatInput)
 ```
 
 ### Assign a confidence score to each instances using classifiers:
-The labeled feature matrix can be used as input for Support Vector Machine (SVM) or Random Forest (RF) classifiers. The classifier then assigns each bait-prey pair a confidence score, indicating the level of support for that pair of proteins to interact. Hyperparameter optimization can also be performed to select a set of parameters that maximizes the model's performance. The RF and the SVM functions provided in this package also computes the areas under the precision-recall (PR) and ROC curve to evalute the performance of the classifer. 
+The labeled feature matrix can be used as input for Support Vector Machine (SVM) or Random Forest (RF) classifiers. The classifier then assigns each bait-prey pair a confidence score, indicating the level of support for that pair of proteins to interact. Hyperparameter optimization can also be performed to select a set of parameters that maximizes the model's performance. The RF and the SVM functions provided in this package also computes the areas under the precision-recall (PR) and ROC curve to evalute the performance of the classifier. 
 
 #### Import the demo data:
 ```{r}
