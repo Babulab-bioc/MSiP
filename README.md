@@ -8,7 +8,7 @@ library(MSiP)
 ```
 ### Installation from github:
 ```{r}
-install_github("Babulab-bioc/MSiP")
+install_github("mrbakhsh/MSiP")
 library(MSiP)
 ```
 
