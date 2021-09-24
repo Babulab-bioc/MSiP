@@ -1,7 +1,12 @@
 <!-- badges: start -->
+[![](https://img.shields.io/badge/lifecycle-stable-yellow.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
+[![](https://img.shields.io/github/last-commit/mrbakhsh/MSiP.svg)](https://github.com/mrbakhsh/MSiP/commits/main)
 [![CRAN Version](https://www.r-pkg.org/badges/version/MSiP)](https://cran.r-project.org/package=MSiP)
 [![Downloads from the RStudio CRAN mirror](https://cranlogs.r-pkg.org/badges/MSiP)](https://cranlogs.r-pkg.org/badges/MSiP)
+[![License: GPL (&gt;=
+3)](https://img.shields.io/badge/license-GPL%20(%3E=%203)-orange.svg)](https://cran.r-project.org/web/licenses/GPL%20(%3E=%203))
 <!-- badges: end -->
+
 
 # Mass Spectrometry interaction Prediction (MSiP)
 The MSiP is a computational approach to predict protein-protein interactions from largescale affinity purification mass spectrometry (AP-MS) data. This approach includes both spoke and matrix models for interpreting AP-MS data in a network context. The 'spoke' model considers only bait-prey interactions, whereas the 'matrix' model assumes that each of the identified proteins (baits and prey) in a given AP-MS experiment interacts with each of the others. The spoke model has a high false-negative rate, whereas the matrix model has a high false-positive rate. Although, both statistical models have merits, a combination of both models has shown to increase the performance of machine learning classifiers in terms of their capabilities in discrimination between true and false positive interactions [Drew et al., 2017](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5488662).  
