@@ -1,11 +1,11 @@
 
 <!-- badges: start -->
-[![](https://img.shields.io/badge/lifecycle-stable-green.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
+[![](https://img.shields.io/badge/lifecycle-stable-yellow.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 [![](https://img.shields.io/github/last-commit/mrbakhsh/MSiP.svg)](https://github.com/mrbakhsh/MSiP/commits/main)
 [![CRAN Version](https://www.r-pkg.org/badges/version/MSiP)](https://cran.r-project.org/package=MSiP)
 [![Downloads from the RStudio CRAN mirror](https://cranlogs.r-pkg.org/badges/MSiP)](https://cranlogs.r-pkg.org/badges/MSiP)
 [![License: GPL (&gt;=
-3)](https://img.shields.io/badge/license-GPL%20(%3E=%203)-blue.svg)](https://cran.r-project.org/web/licenses/GPL%20(%3E=%203))
+3)](https://img.shields.io/badge/license-GPL%20(%3E=%203)-orange.svg)](https://cran.r-project.org/web/licenses/GPL%20(%3E=%203))
 <!-- badges: end -->
 
 
