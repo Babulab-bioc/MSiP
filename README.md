@@ -17,12 +17,15 @@ MSiP is a computational approach to predict protein-protein interactions from la
 install.packages('MSiP')
 library(MSiP)
 ```
-### Installation from github:
-```{r}
-install_github("mrbakhsh/MSiP")
+### To install the development version in `R`, run:
+```r
+if(!requireNamespace("devtools", quietly = TRUE)) {
+  install.packages("devtools") 
+}
+devtools::install_github("mrbakhsh/MSiP")
 library(MSiP)
-```
 
+```
 ### Sample Data Description:
 A demo AP-MS proteomics dataset is provided in this package to guide the users about data structure.
 ```{r}
